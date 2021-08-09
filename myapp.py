@@ -3,7 +3,6 @@ import yfinance as yf
 
 #pip install streamlit
 import streamlit as st
-import pandas as pd 
 
 # Command prompt: streamlit run <file name>
 
