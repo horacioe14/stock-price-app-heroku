@@ -1,4 +1,4 @@
-python==3.9.6
+python==3.8.3
 streamlit==0.86.0
 yfinance
 pandas
