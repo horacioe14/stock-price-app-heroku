@@ -1,1 +1,4 @@
 python-3.8.11
+streamlit-0.86.0
+yfinance-0.1.63
+pandas-1.0.5
