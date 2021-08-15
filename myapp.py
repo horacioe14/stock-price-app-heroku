@@ -4,6 +4,14 @@ import yfinance as yf
 #pip install streamlit
 import streamlit as st
 
+import sys
+
+if not sys.warnoptions:
+    import warnings
+    warnings.simplefilter("ignore")
+
+#warnings.filterwarnings("ignore")
+
 # Command prompt: streamlit run <file name>
 
 # For st.write formatting refer to  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#tables 
@@ -31,7 +39,12 @@ tickerSymbol = st.text_input('', 'Input the Stock Symbol here to view price')
 
 tickerData = yf.Ticker(tickerSymbol)
 
-tickerDf = tickerData.history(period='1d', start = '2010-5-31', end= '2020-5-31')
+start_d = st.text_input('Input start date yyyy-mm-dd:', '2021-01-01')
+
+end_d = st.text_input('Input end date yyyy-mm-dd:', '2021-08-01')
+                        
+
+tickerDf = tickerData.history(period='1d', start = start_d, end= end_d)
 #Open High Low Close VOlume Dividends Stock Splits
 
 st.write("""
