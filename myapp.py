@@ -32,7 +32,7 @@ Below are the stock **closing price** and ***volume*** of the stock of your choi
 
 
 
-tickerSymbol = st.text_input('', 'Input the Stock Symbol here to view price')
+tickerSymbol = st.text_input('Input the Stock Symbol below to view price:', 'GOOGL')
 
 
 #get data on this ticker
